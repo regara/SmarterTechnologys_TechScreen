@@ -1,5 +1,3 @@
-using SmarterTechnology.PackageSorter.Helpers;
-
 namespace SmarterTechnology.PackageSorter;
 
 public static class PackageSorter
@@ -8,17 +6,7 @@ public static class PackageSorter
     public const double DimensionThreshold = 150d;
     public const double MassThreshold = 20d;
 
-    public static string sort(double width, double height, double length, double mass)
-    {
-        return Sort(width, height, length, mass);
-    }
-
-    public static string Sort(double width, double height, double length, double mass)
-    {
-        return SortToStack(width, height, length, mass).FormatToUpperCase();
-    }
-
-    public static StackType SortToStack(double width, double height, double length, double mass)
+    public static StackType Sort(double width, double height, double length, double mass)
     {
         ValidateDimension(width, nameof(width));
         ValidateDimension(height, nameof(height));
@@ -26,8 +14,7 @@ public static class PackageSorter
         ValidateMass(mass, nameof(mass));
 
         var volume = width * height * length;
-        var isBulky = double.IsInfinity(volume) ||
-                      volume >= VolumeThreshold ||
+        var isBulky = volume >= VolumeThreshold ||
                       width >= DimensionThreshold ||
                       height >= DimensionThreshold ||
                       length >= DimensionThreshold;
