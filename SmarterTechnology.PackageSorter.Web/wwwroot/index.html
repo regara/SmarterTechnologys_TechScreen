@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smarter Technology Package Sorter</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="ambient-shape shape-a"></div>
+    <div class="ambient-shape shape-b"></div>
+    <main class="page">
+        <header class="hero">
+            <p class="eyebrow">Factory Dispatch Dashboard</p>
+            <h1>Smarter Technology Package Sorter</h1>
+            <p class="subtitle">
+                Add packages one-by-one and track each stack in real time.
+            </p>
+        </header>
+
+        <section class="panel">
+            <h2>Add Package</h2>
+            <form id="manual-form" class="manual-form">
+                <label>
+                    Width (cm)
+                    <input id="width" type="number" step="any" required />
+                </label>
+                <label>
+                    Height (cm)
+                    <input id="height" type="number" step="any" required />
+                </label>
+                <label>
+                    Length (cm)
+                    <input id="length" type="number" step="any" required />
+                </label>
+                <label>
+                    Mass (kg)
+                    <input id="mass" type="number" step="any" required />
+                </label>
+                <button type="submit" class="action">Add Package</button>
+            </form>
+            <p id="status" class="status" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="summary-grid">
+            <article class="summary-card">
+                <h3>Total</h3>
+                <p id="count-total">0</p>
+            </article>
+            <article class="summary-card">
+                <h3>STANDARD</h3>
+                <p id="count-standard">0</p>
+            </article>
+            <article class="summary-card">
+                <h3>SPECIAL</h3>
+                <p id="count-special">0</p>
+            </article>
+            <article class="summary-card">
+                <h3>REJECTED</h3>
+                <p id="count-rejected">0</p>
+            </article>
+        </section>
+
+        <section class="panel">
+            <div class="panel-title-row">
+                <h2>Package Stacks</h2>
+                <button id="clear-all" type="button" class="ghost">Clear List</button>
+            </div>
+            <div class="stack-grid">
+                <article class="stack standard">
+                    <h3>STANDARD</h3>
+                    <ul id="standard-list" class="stack-list"></ul>
+                </article>
+                <article class="stack special">
+                    <h3>SPECIAL</h3>
+                    <ul id="special-list" class="stack-list"></ul>
+                </article>
+                <article class="stack rejected">
+                    <h3>REJECTED</h3>
+                    <ul id="rejected-list" class="stack-list"></ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

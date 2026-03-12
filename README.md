@@ -22,8 +22,8 @@ Return stack:
 ## Project Structure
 
 - `SmarterTechnology.PackageSorter` - core sorting library
-- `SmarterTechnology.PackageSorter.Demo` - console app with `.Main` entry point and user-friendly input flow
-- `SmarterTechnology.PackageSorter.Tests` - xUnit + FluentAssertions tests
+- `SmarterTechnology.PackageSorter.Web` - ASP.NET Core web UI for adding packages and viewing live stack groups
+- `SmarterTechnology.PackageSorter.Tests` - MSTest + FluentAssertions tests
 
 ## Edge Case Handling
 
@@ -35,19 +35,19 @@ The core sorter rejects invalid input values:
 
 Decimal values are fully supported.
 
-## Run
-
-Interactive mode:
+## Run Web UI
 
 ```bash
-dotnet run --project .\SmarterTechnology.PackageSorter.Demo
+dotnet run --project .\SmarterTechnology.PackageSorter.Web
 ```
 
-Command-line mode:
+Then open the local URL shown in the console (typically `http://localhost:5000` or `https://localhost:5001`).
 
-```bash
-dotnet run --project .\SmarterTechnology.PackageSorter.Demo -- 100 100 100 20
-```
+Web UI capabilities:
+
+- Add packages from explicit width/height/length/mass fields
+- Keep adding multiple packages
+- See running totals and grouped stack lists (`STANDARD`, `SPECIAL`, `REJECTED`)
 
 ## Test
 
