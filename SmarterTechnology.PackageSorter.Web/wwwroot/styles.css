@@ -73,6 +73,14 @@ body {
     gap: 0.8rem;
 }
 
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
 .eyebrow {
     margin: 0 0 0.35rem;
     font-size: 0.78rem;
@@ -330,6 +338,10 @@ input:focus {
     .hero-top {
         align-items: flex-start;
         flex-direction: column;
+    }
+
+    .hero-actions {
+        justify-content: flex-start;
     }
 
     .manual-form {

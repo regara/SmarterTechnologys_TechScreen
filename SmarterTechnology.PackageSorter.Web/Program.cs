@@ -49,7 +49,10 @@ app.MapGet("/readme", () =>
                      <div class="readme-shell">
                          <header class="readme-header">
                              <p class="eyebrow">Documentation</p>
-                             <a class="back-link" href="/">Back to Sorter</a>
+                             <div class="readme-actions">
+                                 <a class="back-link" href="/">Back to Sorter</a>
+                                 <a class="repo-link" href="https://github.com/regara/SmarterTechnologys_TechScreen" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                             </div>
                          </header>
                          <article class="readme-body">
                              {{renderedBody}}
