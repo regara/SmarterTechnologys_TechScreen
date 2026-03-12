@@ -66,12 +66,37 @@ body {
     animation: rise-in 450ms ease-out both;
 }
 
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+}
+
 .eyebrow {
     margin: 0 0 0.35rem;
     font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.11rem;
     color: var(--brand-strong);
+}
+
+.hero-link {
+    text-decoration: none;
+    color: var(--brand-strong);
+    border: 1px solid rgba(31, 42, 42, 0.2);
+    background: rgba(255, 255, 255, 0.86);
+    border-radius: 999px;
+    padding: 0.38rem 0.7rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: transform 140ms ease, filter 140ms ease, border-color 140ms ease;
+}
+
+.hero-link:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.03);
+    border-color: rgba(14, 124, 107, 0.55);
 }
 
 h1 {
@@ -300,6 +325,11 @@ input:focus {
     .page {
         margin-top: 1.2rem;
         width: 95vw;
+    }
+
+    .hero-top {
+        align-items: flex-start;
+        flex-direction: column;
     }
 
     .manual-form {
